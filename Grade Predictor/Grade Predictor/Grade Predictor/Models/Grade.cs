@@ -8,6 +8,6 @@ namespace Grade_Predictor.Models
 {
     class Grade
     {
-;
+
     }
 }
