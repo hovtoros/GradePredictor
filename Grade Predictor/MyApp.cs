@@ -19,29 +19,52 @@ namespace Grade_Predictor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            HideControl(new List<Control> { freshman_button, sophomore_button, junior_button, senior_button, core_button, foundamental_button, elective_button });
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void HideControl(List<Control> c) // function to hide a container
         {
-            //button1.Visible = false;
-            //button2.Visible = false;
-            //button3.Visible = false;
-            //label1.Visible = true;
-            //textBox1.Visible = true;
-            HideControl(new List<Control> { button2, button2 });
-        }
-
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void HideControl(List<Control> c)
-        {
-            foreach (var controle in c)
+            foreach (var control in c)
             {
-                controle.Visible = false;
+                control.Visible = false;
             }
+        }
+
+        private void ShowControl(List<Control> c) // function to show a container
+        {
+            foreach (var control in c)
+            {
+                control.Visible = true;
+            }
+        }
+
+        private void CS_button_Click(object sender, EventArgs e)
+        {
+            HideControl(new List<Control> { CS_button, BUS_button, EC_button });
+            ShowControl(new List<Control> { freshman_button, sophomore_button, junior_button, senior_button});
+        }
+
+        private void BUS_button_Click(object sender, EventArgs e)
+        {
+            HideControl(new List<Control> { CS_button, BUS_button, EC_button });
+            ShowControl(new List<Control> { freshman_button, sophomore_button, junior_button, senior_button });
+        }
+
+        private void EC_button_Click(object sender, EventArgs e)
+        {
+            HideControl(new List<Control> { CS_button, BUS_button, EC_button });
+            ShowControl(new List<Control> { freshman_button, sophomore_button, junior_button, senior_button });
+        }
+
+        private void core_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void freshman_button_Click(object sender, EventArgs e)
+        {
+            var myForm = new CS_Form();
+            myForm.ShowDialog();
         }
     }
 }
