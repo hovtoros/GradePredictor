@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Grade_Predictor.Models
 {
-    class Grade
+    public class Grade
     {
-
+        public InputGrade In_Grade { get; set; }
+        public OutputGrade Out_Grade { get; set; }
     }
 }

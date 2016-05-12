@@ -27,20 +27,25 @@ namespace Grade_Predictor.Models
 
         public static bool IsValidGrade(int value)
         {
-            if (value < 1 || value > 100)
+            if (value < 0 || value > 100)
             {
                 return false;
             }
             return true;
         }
 
-        //public static bool IsValidSbNum(int value, )
+        public static bool IsValidSbNum(int value, int number)
+        {
+            if (value < 0 || value > number)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        //public static bool IsClicked(Button btn)
         //{
-        //    if (value < 1 || value > 100)
-        //    {
-        //        return false;
-        //    }
-        //    return true;
+        //    return false;
         //}
     }
 }

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Grade_Predictor.Models
 {
-    public class Course
+    public class Student
     {
-        public string Type { get; set; }
-        public Grade _Grade { get; set; }
+        public string Department { get; set; }
+        public Course _Course { get; set; }
     }
 }
+
